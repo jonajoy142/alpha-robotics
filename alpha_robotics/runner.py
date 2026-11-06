@@ -97,6 +97,8 @@ class SweepRunner:
             wrapped_env = ChaosWrapper(base_env, faults=fault_config, seed=self.master_seed)
 
             for ep_idx in range(self.episodes_per_cell):
+                if hasattr(self.policy_fn, "reset"):
+                    self.policy_fn.reset()
                 ep_seed = self.master_seed + cell_idx * 1000 + ep_idx
                 obs, info = wrapped_env.reset(seed=ep_seed)
 

@@ -55,6 +55,7 @@ Instead of running nominal tests that hide edge-case failures, Alpha systematica
 ### Installation
 
 ```bash
+git clone https://github.com/jonajoy142/alpha-robotics.git
 cd alpha-robotics
 pip install -e .
 ```
@@ -80,10 +81,11 @@ obs, reward, terminated, truncated, info = env.step(action)
 
 ## 🔬 Automated Failure Boundary Discovery
 
-Run a full stress battery and discover where the policy falls off a cliff:
+Run a full stress battery and discover where your policy falls off a cliff:
 
 ```python
 from alpha_robotics import SweepRunner, FailureAttributor, ReportGenerator
+import gymnasium as gym
 
 # 1. Define stress dimensions
 runner = SweepRunner(
@@ -167,10 +169,11 @@ Alpha compiles all sweep telemetry into a self-contained, interactive `report.ht
 
 Alpha is grounded in empirical embodied robotics reliability research:
 - Paper: *"Alpha: Systematic Fault Injection and Robustness Evaluation for LLM-Driven Embodied Manipulation"* ([arXiv:2610.30197](https://arxiv.org/abs/2610.30197))
-- Research Repository: [`jonajoy142/alpha_repo`](https://github.com/jonajoy142/alpha-embodied-robustness)
+- Research Repository: [`jonajoy142/alpha-embodied-robustness`](https://github.com/jonajoy142/alpha-embodied-robustness)
 
 ---
 
 ## 📄 License
 
 Apache License 2.0. Copyright 2026 Jona Joy.
+
