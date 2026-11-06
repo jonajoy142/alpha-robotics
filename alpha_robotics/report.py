@@ -62,3 +62,4 @@ class ReportGenerator:
         with open(out_file, "w", encoding="utf-8") as f:
             f.write(html_content)
         return out_file
+
