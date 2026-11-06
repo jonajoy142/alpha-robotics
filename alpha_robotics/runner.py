@@ -138,3 +138,4 @@ class SweepRunner:
             return pd.DataFrame(records)
         except ImportError:
             return records
+

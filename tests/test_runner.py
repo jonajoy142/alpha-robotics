@@ -62,3 +62,4 @@ def test_sweep_runner_deterministic():
         assert rec1["reward"] == rec2["reward"]
         assert rec1["steps"] == rec2["steps"]
         assert rec1["success"] == rec2["success"]
+

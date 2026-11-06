@@ -63,3 +63,4 @@ def test_failure_attributor_resilient_policy():
     assert diagnosis.overall_robustness_score == 100.0
     assert diagnosis.grade == "A"
     assert diagnosis.most_vulnerable_fault is None
+
